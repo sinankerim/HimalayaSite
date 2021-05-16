@@ -1,3 +1,3 @@
 /*Kullanici için Siparislerim */ 
 
-select * from siparis where kid=1
+select * from siparis where kid=3
