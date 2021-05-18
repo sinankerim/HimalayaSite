@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title></title>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <link rel="stylesheet" type="text/javascript" href="myJquery.js">
+    <script src="jquery-3.6.0.min.js" ></script>
+        <script>
+           
+           $(document).ready(function()
+           {
+           
+            $('#lg-login-btn').click(function(){
+                   $('#login').css({
+                            'display':'block'
+                       }); 
+                    
+                       $('#register').css(
+                       {
+                            'display':'none'
+                       });
+
+                       $('#lg-register-btn').css(
+                           {
+                                'background-color':'#eee'
+                           }
+                       );
+
+                       $('#lg-login-btn').css(
+                           {
+                                'background-color':'white'
+                           }
+                       );
+               }
+
+               );
+
+               $('#lg-register-btn').click(function(){
+                   $('#login').css(
+                       {
+                            'display':'none'
+                       }); 
+                    
+
+                       $('#register').css(
+                       {
+                            'display':'block'
+                       }); 
+
+                       $('#lg-register-btn').css(
+                           {
+                               'background-color':'white'
+                           }
+                       );
+
+                       $('#lg-login-btn').css(
+                           {
+                                'background-color':'#eee'
+                           }
+                       );
+                    });
+               });
+        </script>
+
+    </head>
+
+    <body>
+        <div id="login-container">
+            <div id="lg-logo-box"><a href="index.html"><span id="lg-logo">haydiburada</span></a></div>
+
+            <div id="main-box">
+                
+                <div id="login-register"><button id="lg-login-btn">Giriş yap</button><button id="lg-register-btn">Kayıt ol</button></div>
+                
+                <div id="login">
+                    <input class="login-txt-box" type="text" placeholder="E-posta adresi">
+                    <input class="login-txt-box" type="text" placeholder="Şifre">
+
+                    <button  id="giris-btn">Giriş Yap</button>
+
+                    <span id="sif-unuttum">Şifremi Unuttum</span>
+                </div>
+
+                <div id="register">
+                    <input class="as-txt" type="text" placeholder="Ad">    <input class="as-txt" type="text" placeholder="Soyad">
+                    <input class="register-txt" type="text" placeholder="E-posta adresi">
+                    <input class="register-txt" type="text" placeholder="Şifre">
+
+                    <input id="register-cb" type="checkbox"> <span id="gs">Gizlilik Sözleşmesini okudum onaylıyorum.</span>
+
+                    <button id="giris-btn"> Üye ol </button>
+
+                    <span id="register-info"></span>
+
+                </div>
+
+            </div>
+
+        </div>
+    </body>
+</html>
