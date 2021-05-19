@@ -13,6 +13,51 @@
 
 	
 	$(document).ready(function(){
+		$('#product-pDetails-btn').click(function()
+		{
+				$('#product-comment').css({
+
+					'display':'none'
+
+				});
+
+				$('#product-details').css({
+					'display':'block'
+				});
+
+				$('#product-pDetails-btn').css({
+
+					'background-color':'#eee'
+
+				});
+
+				$('#product-pComments-btn').css({
+					'background-colo':'#aaa'
+				});
+		});
+
+		$('#product-pComments-btn').click(function(){
+			$('#product-details').css({
+
+					'display':'none'
+
+				});
+
+				$('#product-comment').css({
+					'display':'block'
+				});
+
+			$('#product-pComments-btn').css({
+
+					'background-color':'#eee'
+
+				});
+
+				$('#product-pDetails-btn').css({
+					'background-colo':'#aaa'
+				});
+		});
+
 
 	});
 
@@ -113,9 +158,43 @@
 					<button id="product-addToCart-btn"><i class="fas fa-shopping-cart"></i> Sepete Ekle</button>
 				</div>
             </div>
+			
         </div>
+		
+		<div id="product-bottom">
+			
+			<div id="product-bottom-left">
+				<button id="product-pDetails-btn">Ürün Detayları</button>
 
+				<button id="product-pComments-btn">Yorumlar</button>
+			</div>
 
+			<div id="product-bottom-right">
+				<div id="product-details">
+					<?php product_name ?> Ürün Adı<br>
+					<br>
+					<?php product_details ?>
+					açıklama açıklama açıklama açıklama açıklama açıklama açıklama açıklama açıklama açıklama 
+				</div>
+
+				<div id="product-comment">
+					<div id="comment-section">
+						<span style="font-weight: 600;"><?php member_name ?> Yorum Gönderen</span><br>
+						<br>
+						<?php comment ?> Yorum
+						<br>
+					</div>
+					<div id="post-comment-section">
+						<span style="font-weight:600; font-size:18px;">Deneyimlerinizi diğer kullanıcılarımıza iletin</span><br>
+						<br>
+						<textarea id="post-comment-txt"></textarea><br>
+						<button id="post-commend-send-btn">Gönder</button>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
 		<div id="featured">
 			<section>
 				<h3>haydiburada.com</h3>
@@ -158,7 +237,7 @@
 			</section>
 		</div>
 
-	</div>
+	
 
 </body>
 </html>
