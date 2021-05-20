@@ -3,11 +3,25 @@ body
 	margin: 0px;
 }
 
+@keyframes fade {
+	0% { opacity: 0 }
+	100% { opacity: 1 }
+}
+
 
 #container
  {
- 	margin: auto;
- 	width: 1200px;
+	width: 1275px;
+	margin:0px auto;
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background-color: #eee;
+	border-radius:5px ;
+	padding: 20px;
+	display: flex;
+	justify-content:start;
+	flex-wrap: wrap;
+	min-height: 0px;
+	overflow: hidden;
  }
 
 #top
@@ -35,7 +49,7 @@ body
 
 #logo-spn
 {
-	color:#ff97b7;
+	color:orangered;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight:bold;
 	font-size:35px;
@@ -347,10 +361,11 @@ body
 #firsatlar-belt
 {
 	width: 100%;
-	background-color: #fb5607;
+	background-color: #ef233c;
 	text-align: center;
 	padding: 10px 0px;
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+	margin-top: 10px;
 
 }
 #firsatlar-belt h3
@@ -695,7 +710,7 @@ body
 
 .cart-product
 {
-	width: 95%;
+	width: 80%;
 	padding:10px 20px;
 	display: flex;
 	justify-content: space-between;
@@ -713,7 +728,7 @@ body
 
 .cart-product-info
 {
-	width: 65%;
+	width: 70%;
 }
 
 .cart-product-quantity
@@ -722,6 +737,7 @@ body
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	display: none;
 }
 
 .cart-product-quantity button
@@ -981,9 +997,9 @@ body
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#product-details
+#product-comment
 {
-	
+	display: none;
 }
 
 #comment-section
@@ -1022,7 +1038,251 @@ body
 	max-height: 100px;
 }
 
-@keyframes fade {
-	0% { opacity: 0 }
-	100% { opacity: 1 }
+
+/* ---------------------------SEARCH.HTML------------------------ */
+
+#search-container
+{
+	width: 1275px;
+	margin:0px auto;
+	font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	background-color: #eee;
+	border-radius:5px ;
+	padding: 20px;
+	display: flex;
+	justify-content:start;
+	flex-wrap: wrap;
+	min-height: 0px;
+	overflow: hidden;
+}
+
+.search-product
+{
+	margin: 5px;
+	border:1px solid #dedede;
+	border-radius: 0px;
+	width: 200px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	padding:20px 0px ;
+	background-color: #fff;
+	color: #333;
+	font-weight: 600;
+	cursor:pointer;
+	
+}
+
+.search-product:hover
+{
+	box-shadow:0px 0px 10px grey ;
+}
+
+.search-product button
+{
+	border: 2px solid #ccc;
+	background-color: #333;
+	color:white;
+	font-weight: 600;
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+}
+
+.search-product img
+{
+	width: 200px;
+	height: 200px;
+	
+}
+
+.search-product-name
+{
+	width: 180px;
+	font-size: 12px;
+	font-weight: 600;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	margin:0px auto;
+}
+
+
+
+/* ----------------------------------ACCOUNT.HTML------------------------- */
+
+
+#account-container
+{
+	width: 1250;
+	margin: 0px auto;
+	display: flex;
+	flex-direction: row;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#account-left
+{
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	border: 1px solid #ccc;
+	height: 114px;
+}
+
+#account-left button
+{
+	padding:10px 5px;
+	font-size:16px;
+	font-weight: 550;
+	outline:none;
+	border:0px;
+	
+}
+
+#account-orders-btn
+{
+	background-color: #eee;
+}
+
+#account-comments-btn
+{
+	background-color: #ccc;
+}
+
+#account-info-btn
+{
+	background-color: #ccc;
+}
+
+
+#account-right
+{
+	width:80%;
+	border:1px solid #ccc ;
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+#account-orders
+{
+	display: block;
+}
+
+#account-info
+{
+	display: none;
+}
+
+#account-comments
+{
+	display: none;
+}
+
+.order
+{
+	display: flex;
+	flex-direction:row ;
+	justify-content: space-between;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	margin:10px 0px;
+	
+}
+
+.order img
+{
+	width: 100px;
+	height: 100px;
+	box-shadow: 0px 0px 2px grey;
+}
+
+.order-product_name
+{
+	width:25%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+
+}
+
+.order-price
+{
+	width: 20%;
+}
+
+.order-status
+{
+	width: 20%;
+}
+
+
+
+/* -----------------STORE.HTML------------------*/
+
+#store-container
+{
+	width: 1250px;
+	display:flex;
+	flex-direction: row;
+	margin: 0px auto;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#store-left
+{
+	display: flex;
+	flex-direction: column;
+	width: 20%;
+	border:1px solid #ccc;
+	border-right: 0px;
+	height: 155px;
+}
+
+#store-left button
+{
+	padding:10px 5px;
+	font-size:16px;
+	font-weight: 550;
+	outline:none;
+	border:0px;	
+}
+
+#store-addProduct-btn
+{
+	background-color: #ccc;
+}
+
+#store-orders-btn
+{
+	background-color: #ccc;
+}
+
+#store-info-btn
+{
+	background-color: #ccc;
+}
+
+#store-right
+{
+	width:80%;
+	border:1px solid #ccc ;
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+}
+
+#store-products
+{
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+	flex-wrap: nowrap;
 }

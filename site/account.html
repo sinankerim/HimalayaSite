@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <title></title>
+
+        <link rel="stylesheet" type="text/css" href="CSS.css">
+        <script src="jquery-3.6.0.min.js" > </script>
+        <script>
+            
+        $(document).ready(function(){
+            
+            //-------When you click on the "Siparişlerim" button-------------
+            
+            $('#account-orders-btn').click(function(){
+
+                $('#account-comments').css({
+                    'display':'none'
+                });
+
+                $('#account-info').css({
+                    'display':'none'
+                });
+
+                $('#account-orders').css({
+                    'display':'block',
+                    'animation':'fade 1s linear'
+                });
+
+                $('#account-comments-btn').css({
+                    'background-color':'#ccc'
+                });
+
+                $('#account-info-btn').css({
+                    'background-color':'#ccc'
+                });
+
+                $('#account-orders-btn').css({
+                    'background-color':'#eee'
+                });
+
+            });
+
+            //---------------------When you click on the "Yorumlarım" button---------------------
+
+            $('#account-comments-btn').click(function(){
+
+                $('#account-comments').css({
+                    'display':'block',
+                    'animation':'fade 1s linear'
+                });
+
+                $('#account-info').css({
+                    'display':'none'
+                });
+
+                $('#account-orders').css({
+                    'display':'none'
+                });
+
+                $('#account-comments-btn').css({
+                    'background-color':'#eee'
+                });
+
+                $('#account-info-btn').css({
+                    'background-color':'#ccc'
+                });
+
+                $('#account-orders-btn').css({
+                    'background-color':'#ccc'
+                });
+
+
+                
+                
+                
+            });
+            
+            // -------------------------When you click on the "Bilgilerim" button----------------------
+            
+            $('#account-info-btn').click(function(){
+
+                $('#account-comments').css({
+                    'display':'none'
+                });
+
+                $('#account-info').css({
+                    'display':'block',
+                    'animation':'fade 1s linear'
+                });
+
+                $('#account-orders').css({
+                    'display':'none'
+                });
+
+                $('#account-comments-btn').css({
+                    'background-color':'#ccc'
+                });
+
+                $('#account-info-btn').css({
+                    'background-color':'#eee'
+                });
+
+                $('#account-orders-btn').css({
+                    'background-color':'#ccc'
+                });
+
+
+                                
+
+            });
+
+        });    
+        </script>
+    </head>
+<body>
+
+
+
+    <div id="top">
+        <div id="logo">
+            <a href="index.html"><span id="logo-spn">haydiburada</span></a>
+        </div>
+
+
+        <div id="search">
+            <div id="search-box">	
+                <div id="inputbox"><img style="height: 20px; width: auto; margin: 10px;" src="images/buyutec.png"><input type="text" placeholder="Ne arzu edersiniz?"></div>
+                <button id="search-btn">ARA</button>	
+            </div>
+        </div>
+
+        <div id="member-box">
+            <button id="login-btn" onclick="location.href='login.html'">Giriş Yap</br><span style="font-size:12px; font-weight:normal;">veya kayıt ol</span></button>
+            <button id="cart-btn" onclick="location.href='cart.html'"><i class="fas fa-shopping-cart"></i> Sepetim</button>
+        </div>
+
+    </div>
+
+    <div id="account-container">
+        <div id="account-left">
+            <button id="account-orders-btn">Siparişlerim</button>
+            <button id="account-comments-btn">Yorumlarım</button>
+            <button id="account-info-btn">Bilgilerim</button>
+        </div>
+
+        <div id="account-right">
+            <div id="account-orders">
+                <h3>Siparişlerim</h3>
+
+                <div class="order">
+                    <img src="images/urun.jpg">
+
+                    <span class="order-product_name"><?php product_name ?> Ürün Adı</span>
+
+                    <span class="order-price"><?php price ?> Fiyat</span>
+
+                    <span class="order-status">Sipariş Durumu</span>
+                </div>
+
+                <div class="order">
+                    <img src="images/urun.jpg">
+
+                    <span class="order-product_name"><?php product_name ?> Ürün Adı</span>
+
+                    <span class="order-price"><?php price ?> Fiyat</span>
+
+                    <span class="order-status">Sipariş Durumu</span>
+                </div>
+
+            </div>
+            
+            <div id="account-info">
+                <h3>Kullanıcı Bilgileri</h3>
+                
+                <table style="font-size:22px; font-weight:500;">
+                <tr>
+                    <td>Ad: </td>
+                    <td><input type="text" value="<?php echo username ?>"></td>
+                </tr>
+                
+                <tr>
+                    <td>E-Posta: </td>
+                    <td><input type="text" value="<?php echo e_mail ?>"></td>
+                </tr>
+
+                <tr>
+                    <td>Doğum Tarihi: </td>
+                    <td><input type="text" value="<?php echo birth_date ?>"></td>
+                </tr>
+
+                <tr>
+                    <td>Adres: </td>
+                    <td><input type="text" id="account-info-address" placeholder="Adresinizi ekleyin!"></td>
+                </tr>
+                </table>
+                <!--Ad: <input type="text" value="<?php echo username ?>"><br>
+                <br>
+                E-Posta: <input type="text" value="<?php echo e_mail ?>"><br>
+                <br>
+                Doğum Tarihi: <input type="text" value="<?php echo birth_date ?>"><br>
+                <br>
+                Adres: <input type="text" placeholder="Adresinizi ekleyin!">
+                -->
+
+                
+
+
+
+            </div>
+
+            <div id="account-comments">
+                <div id="account-comment">
+					<div id="comment-section">
+						<span style="font-weight: 600;"><?php echo product_name ?> Ürün Adı</span><br>
+						<br>
+						<?php echo comment ?> Yorum
+						<br>
+					</div>
+					
+				</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="featured">
+        <section>
+            <h3>haydiburada.com</h3>
+            <ul>
+                <li><a href="">Hakkımızda</a></li>
+                <li><a href="">Hesabım</a></li>
+                <li><a href="">Çözüm Merkezi</a></li>
+                <li><a href="">Gizlilik Sözleşmesi</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>haydişurada.com</h3>
+            <ul>
+                <li><a href="">Hakkımızda</a></li>
+                <li><a href="">Hesabım</a></li>
+                <li><a href="">Çözüm Merkezi</a></li>
+                <li><a href="">Gizlilik Sözleşmesi</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>haydiorada.com</h3>
+            <ul>
+                <li><a href="">Hakkımızda</a></li>
+                <li><a href="">Hesabım</a></li>
+                <li><a href="">Çözüm Merkezi</a></li>
+                <li><a href="">Gizlilik Sözleşmesi</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>haydinerede.com</h3>
+            <ul>
+                <li><a href="">Hakkımızda</a></li>
+                <li><a href="">Hesabım</a></li>
+                <li><a href="">Çözüm Merkezi</a></li>
+                <li><a href="">Gizlilik Sözleşmesi</a></li>
+            </ul>
+        </section>
+    </div>
+
+
+</body>
+</html>
