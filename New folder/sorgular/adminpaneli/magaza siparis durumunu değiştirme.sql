@@ -1,3 +1,3 @@
 update siparis
-set durum=(select id from durum where durum='Hazirlaniyor') /*esittir ve sonrası çıkarılıp yerine normal id geitirilebilir.*/
+set durum=3 /*durum bilgisi için ek combobox sorgusu var :'magaza durum bilgileri'*/
 where siprarisid=3
