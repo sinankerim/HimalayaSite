@@ -1,0 +1,1 @@
+INSERT INTO satis (satisid, mid, uid, fiyat, garanti, indirim) Values(null, 0, 0, 0, 0, 0) /*hata verebilir emin değilim*/
