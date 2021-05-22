@@ -1,5 +1,5 @@
-if NOT EXISTS(select * from kullanici where eposta='eposta1')
+if NOT EXISTS(select * from kullanici where eposta='0')
 begin
 	insert into kullanici (eposta, sifre, isim, yas) 
-	values('eposta1', 'sifre', 'isim', 15)
+	values('0', '0', '0', 0)
 end

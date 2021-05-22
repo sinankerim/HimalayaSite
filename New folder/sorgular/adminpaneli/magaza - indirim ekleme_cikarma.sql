@@ -1,3 +1,3 @@
 update satis
-set indirim=100
+set indirim=0
 where satisid=0

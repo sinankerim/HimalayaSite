@@ -5,10 +5,11 @@ yapılanlar
 +urunların rating ortalaması
 +mysql kurulum
 +siteyi php ile ayarlanabilir 
++urun yorumlerını getirecek sorgu
++magaza yorttumlarını getirecek sorgu
++ürün girme
 
 yapılacaklar
 +admin panelindeki listeyi full dinamik hale getirmek //https://mariadb.com/kb/en/show-columns/ [SHOW COLUMNS FROM mydb.mytable;]
 +mağaza admin panel
 +duruma göre border renk değiştirme
-+ürün girme
-+urun yorumlerını getirecek sorgu

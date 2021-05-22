@@ -1,3 +1,3 @@
 select * 
 from kullanici
-where eposta='x@xx.x' and sifre='xx'
+where eposta='0@00.0' and sifre='00'
