@@ -3,9 +3,10 @@ yapılanlar
 +kullanicikayitekleme
 +searchbarsql
 +urunların rating ortalaması
++mysql kurulum
++siteyi php ile ayarlanabilir 
 
 yapılacaklar
-+siteyi php ile ayarlanabilir 
-+mysql kurulum
 +mağaza admin panel
 +duruma göre border renk değiştirme
++ürün girme
