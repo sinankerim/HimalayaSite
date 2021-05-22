@@ -225,9 +225,9 @@
                 <div class="order">
                     <img src="images/urun.jpg">
 
-                    <span class="order-product_name"><?php product_name ?> Ürün Adı</span>
+                    <span class="order-product_name">Ürün Adı</span>
 
-                    <span class="order-price"><?php price ?> Fiyat</span>
+                    <span class="order-price"> Fiyat</span>
 
                     <span class="order-status">Sipariş Durumu</span>
                 </div>
@@ -235,9 +235,9 @@
                 <div class="order">
                     <img src="images/urun.jpg">
 
-                    <span class="order-product_name"><?php product_name ?> Ürün Adı</span>
+                    <span class="order-product_name"> Ürün Adı</span>
 
-                    <span class="order-price"><?php price ?> Fiyat</span>
+                    <span class="order-price">Fiyat</span>
 
                     <span class="order-status">Sipariş Durumu</span>
                 </div>
@@ -249,12 +249,12 @@
                 <table style="font-size:22px; font-weight:500;">
                 <tr>
                     <td>Mağaza Adı: </td>
-                    <td><input type="text" value="<?php echo store_name ?>"></td>
+                    <td><input type="text" value=""></td>
                 </tr>
                 
                 <tr>
                     <td>E-Posta: </td>
-                    <td><input type="text" value="<?php echo e_mail ?>"></td>
+                    <td><input type="text" value=""></td>
                 </tr>
 
 

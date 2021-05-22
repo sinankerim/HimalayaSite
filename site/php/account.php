@@ -1,27 +1,19 @@
 <?php 
     
     session_start();
+    
     if($_SESSION["uye_adi"]=="")
     {
-        header("location:index.php");
+        header("location:login.php");
     }
-    function session_stp()
-    {
-        
-        if(session_status() == PHP_SESSION_NONE){
 
-            session_unset($_SESSION["uye_adi"]);
-            
-            header("location:index.php");
-
-		}
-        else echo "gae";
-    }
-    
     if(isset($_GET["logout-check"]))
     {
-        session_unset($_SESSION["uye_adi"]);
+        unset($_SESSION["uye_adi"]);
+        header("location:index.php");
     }
+
+
 
 ?>
 
@@ -146,19 +138,19 @@
 
 
 <?php include 'top.php'; ?>
-        <?php
-            if(!isset($_SESSION["uye_adi"]))
-            {
-                header("location:index.php");
-            }
-        ?>
+        
     <div id="account-container">
+        
+        <!-- ---------------BUTTONS-------------------->
+
         <div id="account-left">
             <button id="account-orders-btn">Siparişlerim</button>
             <button id="account-comments-btn">Yorumlarım</button>
             <button id="account-info-btn">Bilgilerim</button>
             <button id="account-abort-session-btn" onclick="location.href='account.php?logout-check=something'">Hesaptan Ayrıl</button>
         </div>
+
+        <!-- ---------------BUTTONS-------------------->
 
         <div id="account-right">
             <div id="account-orders">
@@ -174,15 +166,7 @@
                     <span class="order-status">Sipariş Durumu</span>
                 </div>
 
-                <div class="order">
-                    <img src="images/urun.jpg">
-
-                    <span class="order-product_name"> Ürün Adı</span>
-
-                    <span class="order-price"> Fiyat</span>
-
-                    <span class="order-status">Sipariş Durumu</span>
-                </div>
+                
 
             </div>
             

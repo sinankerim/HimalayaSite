@@ -1,7 +1,5 @@
 <?php 
-//-CONNECTION--
-$baglanti = new mysqli("localhost","root","","proje_database");
-//-CONNECTION
+include 'connection.php';
 
 session_start();
 
@@ -35,7 +33,7 @@ while($urun = mysqli_fetch_assoc($veriler))
 
 
 	
-	$(document).ready(function(){
+	//$(document).ready(function(){
 
 
 
@@ -65,8 +63,8 @@ while($urun = mysqli_fetch_assoc($veriler))
 			);*/
 
 
-
-	});
+		//});
+	
 
 	
 
@@ -76,10 +74,19 @@ while($urun = mysqli_fetch_assoc($veriler))
  
 </script>
 
+
+
 </head>
 <body>
 		
 		<?php include 'top.php'; ?>
+		<style>
+	#seach_txt
+	{
+		height: 396px;
+	}
+</style>
+
 	
 		<div id="color-belt">
 			<!--<div id="belt-1"></div>-->

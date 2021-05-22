@@ -1,3 +1,19 @@
+<?php 
+include 'connection.php';
+
+$metin = $_GET["s_text"];
+$veriler = mysqli_query($baglanti, "select u.uisim, u.resim, sat.fiyat, m.magazaisim from satis as sat, urun as u, magaza as m where (sat.uid=u.uid and sat.mid=m.magazaid) and ((u.uisim like '%$metin%' or u.hakkinda like '%$metin%' or m.magazaisim like '%$metin%'))" );
+$urunler=array();
+while($urun = mysqli_fetch_assoc($veriler))
+{
+    $urunler[]=$urun;
+}
+
+
+
+?>
+
+
 <html>
 <head>
     <title></title>
@@ -58,182 +74,23 @@
 
     <div id="search-container">
         
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
+        <?php foreach($urunler as $urunler){?>
+
+
+                <div class="search-product">
             
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
+                    <img src="<?php echo $urunler['resim']; ?>">
+                    
+                    <div class="search-product-name"><?php echo $urunler['uisim']; ?></div>
         
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
+                    <div class="seach-product-price"><?php echo $urunler['fiyat']; ?> TL</div>
+        
+                    <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
+                </div>
 
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
+            <?php } ?>
 
         
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
-
-        <div class="search-product">
-           
-            <img src="images/urun.jpg">
-            
-            <div class="search-product-name">Ürün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün AdıÜrün Adı</div>
-
-            <div class="seach-product-price">Ürün Fiyatı</div>
-
-            <div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-        </div>
 
 
     </div>
