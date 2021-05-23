@@ -13,3 +13,5 @@ yapılacaklar
 +admin panelindeki listeyi full dinamik hale getirmek //https://mariadb.com/kb/en/show-columns/ [SHOW COLUMNS FROM mydb.mytable;]
 +mağaza admin panel
 +duruma göre border renk değiştirme
++kullanıcı tablosuna adres ekle ++ onları : 'kad, eposta, adres' getiren sql sorgusu yaz
++kullanıcı ve satis arasında bir tablo daha oluştur (sepet için)
