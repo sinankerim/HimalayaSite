@@ -1,3 +1,3 @@
-select k.isim, uy.puan, uy.yorum
-from urunyorumlari as uy, kullanici as k
-where uy.kullaniciid=k.id and k.id=0
+select u.uisim, uy.puan, uy.yorum
+from urunyorumlari as uy, kullanici as k, urun as u
+where (uy.kullaniciid=k.id and uy.urunid=u.uid) and k.id=1
