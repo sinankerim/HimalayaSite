@@ -2,7 +2,7 @@
 include 'connection.php';
 
 $metin = $_GET["s_text"];
-$veriler = mysqli_query($baglanti, "select u.uisim, u.resim, sat.fiyat, m.magazaisim from satis as sat, urun as u, magaza as m where (sat.uid=u.uid and sat.mid=m.magazaid) and ((u.uisim like '%$metin%' or u.hakkinda like '%$metin%' or m.magazaisim like '%$metin%'))" );
+$veriler = mysqli_query($baglanti, "select u.uid, u.uisim, u.resim, sat.fiyat, m.magazaisim from satis as sat, urun as u, magaza as m where (sat.uid=u.uid and sat.mid=m.magazaid) and ((u.uisim like '%$metin%' or u.hakkinda like '%$metin%' or m.magazaisim like '%$metin%'))" );
 $urunler=array();
 while($urun = mysqli_fetch_assoc($veriler))
 {
