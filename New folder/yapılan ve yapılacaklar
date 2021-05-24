@@ -16,4 +16,4 @@ yapılacaklar
 +kullanıcı tablosuna adres ekle ++ onları : 'kad, eposta, adres' getiren sql sorgusu yaz
 +kullanıcı ve satis arasında bir tablo daha oluştur (sepet için)
 +Ürünlerin hepsinin fiyatı product sayfasındaki sorguda en ucuz fiyat olan 5 TL olarak çekiliyor
-+
++account.php yorum silme özelliği eklenecek
