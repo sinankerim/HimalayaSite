@@ -14,6 +14,7 @@
 						<img src='".$urunler['resim']."'>
 						
 						<input type='hidden' name='urunun_idsi' value='".$urunler['uid']."'>
+						
 						<input type='hidden' name='satisin_idsi' value='".$urunler['satisid']."'>
 
 						<div class='search-product-name'>".$urunler['uisim']."</div>
