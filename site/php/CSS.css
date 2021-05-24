@@ -79,7 +79,6 @@ body
 	outline: none;
 	padding: 0px;
 	padding-left: 5px;
-	margin: 0px;
 	box-sizing: border-box;
 }
 
@@ -1012,7 +1011,7 @@ body
 
 #comment-section
 {
-	margin: auto;
+	margin: 10px auto;
 	border-bottom: 1px solid #ccc;
 	padding:5px;
 }

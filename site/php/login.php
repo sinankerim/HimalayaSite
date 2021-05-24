@@ -74,27 +74,6 @@
                            });
                 });
             });
-
-               
-        
-        
-        
-        </script>
-
-        <script>
-       /* $.ajax({
-            url: 'login.php',
-            type: 'POST',
-            dataType: 'text',
-            data: {kadi: $("input[type='text'][name='kadi_txt']").val()},
-        })
-
-        $.ajax({
-            url: 'login.php',
-            type: 'POST',
-            dataType: 'text',
-            data: {sifre: $("input[type='text'][name='sifre_txt']").val()},
-        })*/
         </script>
 
     </head>
@@ -123,14 +102,15 @@
                 </div>
 
                 <div id="register">
-                    <input class="as-txt" type="text" placeholder="Ad">    <input class="as-txt" type="text" placeholder="Soyad">
-                    <input class="register-txt" type="text" placeholder="E-posta adresi">
-                    <input class="register-txt" type="text" placeholder="Şifre">
+                      <form action="login_phpFunctions.php" method="Post">
+                        <input class="register-txt" name="isim" type="text" placeholder="Ad">    <!--<input class="as-txt" type="text" placeholder="Soyad">-->
+                        <input class="register-txt" name="email" type="text" placeholder="E-posta adresi">
+                        <input class="register-txt" name="sifre" type="text" placeholder="Şifre">
 
-                    <input id="register-cb" type="checkbox"> <span id="gs">Gizlilik Sözleşmesini okudum onaylıyorum.</span>
+                        <input id="register-cb" type="checkbox"> <span id="gs">Gizlilik Sözleşmesini okudum onaylıyorum.</span>
 
-                    <button id="giris-btn"> Üye ol </button>
-
+                        <button id="giris-btn"> Üye ol </button>
+                      </form>
                     <span id="register-info"></span>
 
                 </div>

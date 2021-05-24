@@ -1,5 +1,5 @@
 <?php
-    $baglanti = new mysqli("localhost","root","","proje_database");
+    include 'connection.php';
     session_start();
     $kadi=$_POST["kadi_txt"];
     $sifre=$_POST["sifre_txt"];
@@ -27,4 +27,27 @@
     }
 
 
+?>
+
+<!--   -------------------------------------------------Register--------------------------------------- -->
+
+<?php
+    $r_isim=$_POST["isim"];
+    $r_email=$_POST["email"];
+    $r_sifre=$_POST["sifre"];
+
+
+    /*$sorgu = mysqli_query($baglanti,"insert into kullanici (eposta, sifre, isim, yas) select $r_email, $r_sifre, $r_isim, 15 from dual where NOT EXISTS(select * from kullanici where eposta=$r_email)");
+    header("location:login.php");*/
+
+    $sql="insert into kullanici (eposta, sifre, isim, yas) select '$r_email', '$r_sifre', '$r_isim', 20 from dual where NOT EXISTS(select * from kullanici where eposta='$r_email')";
+
+    if($baglanti->query($sql) === TRUE)
+    {
+        echo "kayot başarıyla eklendi";
+    }
+    else
+    {
+        echo "NOLUYO LAĞN! KİM LAN BU";
+    }
 ?>

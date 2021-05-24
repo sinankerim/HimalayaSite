@@ -1,5 +1,9 @@
 <?php
 //-CONNECTION--
-$baglanti = new mysqli("localhost","root","","proje_database");
+$host="localhost";
+$username="root";
+$password="";
+$db_name="proje_database_3";
+$baglanti = new mysqli($host,$username,$password,$db_name);
 //-CONNECTION
 ?>

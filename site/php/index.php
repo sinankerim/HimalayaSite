@@ -25,7 +25,6 @@ while($urun = mysqli_fetch_assoc($veriler))
 	<title>Anasayfa -Haydiburada.com</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="CSS.css">
-	<link rel="stylesheet" type="text/javascript" href="myJquery.js">
 	<script src="https://kit.fontawesome.com/c8dadfc9a6.js" crossorigin="anonymous"></script>
 
 <script src="jquery-3.6.0.min.js" > </script>
@@ -126,21 +125,7 @@ while($urun = mysqli_fetch_assoc($veriler))
 
 		<div id="container">
 			
-			<?php foreach($urunler as $urunler){?>
-
-
-				<div class="search-product">
-			
-					<img src="<?php echo $urunler['resim']; ?>">
-					
-					<div class="search-product-name"><?php echo $urunler['uisim']; ?></div>
-		
-					<div class="seach-product-price"><?php echo $urunler['fiyat']; ?> TL</div>
-		
-					<div><button class="search-addToCart-btn">Sepete Ekle</button></div>
-				</div>
-
-			<?php } ?>
+			<?php include 'PLF.php'; ?>
 			
 		</div>
 

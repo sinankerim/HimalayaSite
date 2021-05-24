@@ -1,3 +1,29 @@
+<?php
+
+include 'connection.php';
+
+$k_id=$_POST["urunun_idsi"];
+
+if(isset($_POST["urunun_idsi"]))
+{
+	echo "id verisi dolu döndürüldü".$k_id."";
+}
+
+else
+{
+	echo "id verisi boş döndürüldü";
+}
+
+$sql = mysqli_query($baglanti ,"select u.uid, u.uisim,u.resim, u.umarka, u.hakkinda, s.fiyat, m.magazaisim 
+from urun as u, satis as s, magaza as m
+where u.uid=$k_id order by s.fiyat asc limit 1"); 
+
+$row = mysqli_fetch_assoc($sql);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -61,13 +87,7 @@
 
 			
 		});
-
-
 	});
-
-
-
-
 
 
  
@@ -119,8 +139,8 @@
 
             <div id="product-right">
                 
-                <span id="product-product_name">Ürünün Adı</span><br>
-                <span id="product-product_brand">Ürünün Markası</span>
+                <span id="product-product_name"><?php echo $row["uisim"]; ?></span><br>
+                <span id="product-product_brand"><?php echo $row["umarka"]; ?></span>
 
                 <div id="product-price-details">
                     <div id="product-discount-percent-box">
@@ -131,11 +151,11 @@
 					</div>
                     <div>
                         <span id="product-oldPrice-style"><span id="product-old_price">6.000</span> TL<br></span>
-                        <span id="product-product_price">5.000</span> TL
+                        <span id="product-product_price"><?php echo $row["fiyat"]; ?></span> TL
                     </div>    
                 </div>
 
-                <div id="product-store">Satıcı: <span id="product-store_name">Mağaza adı</span></div>
+                <div id="product-store">Satıcı: <span id="product-store_name"><?php echo $row["magazaisim"]; ?></span></div>
                 
 				<div id="product-qatc">
 					<div id="product-quantity">
