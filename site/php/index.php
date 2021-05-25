@@ -4,7 +4,7 @@ include 'connection.php';
 session_start();
 
 
-$veriler = mysqli_query($baglanti, "select u.uid, u.uisim, u.resim, s.fiyat from urun as u, satis as s where u.uid=s.uid" );
+$veriler = mysqli_query($baglanti, "select u.uid, u.uisim, u.resim, s.fiyat, s.satisid from urun as u, satis as s where u.uid=s.uid" );
 $urunler=array();
 while($urun = mysqli_fetch_assoc($veriler))
 {
@@ -22,7 +22,7 @@ while($urun = mysqli_fetch_assoc($veriler))
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Anasayfa -Haydiburada.com</title>
+	<title>Anasayfa -Himalaya.com</title>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="CSS.css">
 	<script src="https://kit.fontawesome.com/c8dadfc9a6.js" crossorigin="anonymous"></script>
@@ -96,6 +96,9 @@ while($urun = mysqli_fetch_assoc($veriler))
 			<div id="belt-6"></div>
 			<div id="belt-7"></div>
 		</div>
+		<div id="new-color-belt">
+			<div id="nc-belt"></div>
+		</div>
 		
 		<div id="menum">
 			<ul>
@@ -119,6 +122,10 @@ while($urun = mysqli_fetch_assoc($veriler))
 				<li><a href="#"> Bay,Bayan Giyim </a></li>
 				<li><a href="#"> Kitap, Müzik, Film, Hobi</a></li>
 			</ul>
+		</div>
+
+		<div id="new-color-belt">
+			<div id="nc-belt"></div>
 		</div>
 
 		<div id="firsatlar-belt"><h3>İŞTE BU FIRSATLAR KAÇMAZ</h3></div>

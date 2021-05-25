@@ -8,17 +8,20 @@
 
 	$login_txt="Giriş Yap";
 
-	if(isset($_SESSION["uye_adi"]) && $_SESSION["uye_adi"]!="")
-	{
-		$login_txt=$_SESSION["uye_adi"];
-		$uye_ad= $_SESSION["uye_adi"];
-		//echo "'uye_adi' session'ı ".$_SESSION["uye_adi"]." değerini döndürdü";
-	}
-	else
-	{
-		//echo "'uye_adi' session'ı kontrol edilirken boş değeri döndürdü ";
-		echo isset($_SESSION["uye_adi"]);
-	}
+	
+	
+		if(isset($_SESSION["uye_adi"]) && $_SESSION["uye_adi"]!="")
+		{
+			$login_txt=$_SESSION["uye_adi"];
+			$uye_ad= $_SESSION["uye_adi"];
+			//echo "'uye_adi' session'ı ".$_SESSION["uye_adi"]." değerini döndürdü";
+		}
+		else
+		{
+			//echo "'uye_adi' session'ı kontrol edilirken boş değeri döndürdü ";
+			echo isset($_SESSION["uye_adi"]);
+		}
+	
 
 	
 	
@@ -46,17 +49,17 @@
             
 
 </script>
-
+<script src="https://kit.fontawesome.com/c8dadfc9a6.js" crossorigin="anonymous"></script>
 <div id="top">
 			<div id="logo">
-				<a href="index.php"><span id="logo-spn">haydiburada</span></a>
+				<a href="index.php"><span id="logo-spn">Himalaya</span></a>
 			</div>
 
 
 			<div id="search">
 				<form id="search" action="search.php" method="get">
 					<div><input id="search_txt" name="s_text" type="text" placeholder="Söyleyin sizin için bulalım!"></div>
-					<div><button id="search-btn" onclick="location.href='search.php'">ARA</button></div>
+					<div><button id="search-btn" onclick="location.href='search.php'"><i class="fas fa-search"></i></button></div>
 				</form>
 			</div>
 

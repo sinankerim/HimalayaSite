@@ -19,7 +19,7 @@ body
 	border-radius:5px ;
 	padding: 20px;
 	display: flex;
-	justify-content:start;
+	justify-content:center;
 	flex-wrap: wrap;
 	min-height: 0px;
 	overflow: hidden;
@@ -53,7 +53,7 @@ body
 
 #logo-spn
 {
-	color:red;
+	color:#90be6d;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-weight:bold;
 	font-size:35px;
@@ -79,6 +79,7 @@ body
 	outline: none;
 	padding: 0px;
 	padding-left: 5px;
+	margin:0px;
 	box-sizing: border-box;
 }
 
@@ -138,13 +139,24 @@ body
 
 /* --------BELT ZONE HERE // START POINT//-------*/
 
+#new-color-belt
+{
+	width: 100%;
+	height: 10px;
+	display: flex;
+}
 
+#nc-belt
+{
+	background-color: #90be6d;
+	width: 100%;
+}
 
 #color-belt
 {
 	width: 100%;
 	height: 10px;
-	display: flex;
+	display: none;
 }
 
 #belt-1
@@ -364,11 +376,11 @@ body
 #firsatlar-belt
 {
 	width: 100%;
-	background-color: #ef233c;
+	background-color: #90be6d;
 	text-align: center;
 	padding: 10px 0px;
 	box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-	margin-top: 10px;
+	//margin-top: 10px;
 
 }
 #firsatlar-belt h3
@@ -378,7 +390,7 @@ body
 	font-weight: bolder;
 	color: white;
 	margin: 0px;
-	font-size:30px; 
+	font-size:30px;
 }
 
 
@@ -461,7 +473,7 @@ body
  #lg-logo
 {
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-	color:orangered;
+	color:green;
 	font-weight:bold;
 	font-size:30px;
 }
@@ -532,7 +544,7 @@ body
 
 #giris-btn
 {
-	background-color: orangered;
+	background-color: green;
 	
 	border-radius: 5px;
 	border:none;
@@ -676,7 +688,7 @@ body
 
 #cart-info-continue-btn
 {
-	background-color: orangered;
+	background-color: green;
 	color:white;
 	height: 50px;
 	padding: 10px;
@@ -729,6 +741,7 @@ body
 	border:1px solid #eee;
 	border-radius:15px;
 	padding: 5px;
+	object-fit: cover;
 }
 
 .cart-product-info
@@ -813,6 +826,13 @@ body
 	border-radius: 8px 0px 0px 8px;
 }
 
+#product-left img
+{
+	width: 550px;
+	height: 300px;
+	object-fit:contain;
+}
+
 #product-right
 {
 	background-color: #eee;
@@ -851,6 +871,7 @@ body
 	color:#bbb;
 	text-decoration: line-through;
 	font-size: 16px;
+	display: none;
 }
 
 #product-discount-percent-box
@@ -867,6 +888,7 @@ body
 	font-weight:600;
 	border-radius: 5px;
 	margin-right: 10px;
+	display: none;
 }
 
 #product-store
@@ -975,7 +997,7 @@ body
 #product-pDetails-btn
 {
 	color:#000;
-	background-color:#eee;
+	background-color:#fff;
 	border:0px solid #eee;
 	border-radius: 5px 0px 0px 0px;
 }
@@ -1067,8 +1089,8 @@ body
 
 .search-product
 {
-	margin: 5px;
-	border:1px solid #dedede;
+	margin: 5px 0px;
+	border:0.5px solid #dedede;
 	border-radius: 0px;
 	width: 200px;
 	height: 300px;
@@ -1076,7 +1098,7 @@ body
 	flex-direction: column;
 	justify-content: space-between;
 	text-align: center;
-	padding:20px 0px ;
+	padding:20px 15px ;
 	background-color: #fff;
 	color: #333;
 	font-weight: 600;
@@ -1104,18 +1126,22 @@ body
 {
 	width: 200px;
 	height: 200px;
+	object-fit:cover;
 	
 }
 
 .search-product-name
 {
 	width: 180px;
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 600;
 	overflow: hidden;
 	text-overflow:ellipsis;
 	white-space: nowrap;
 	margin:0px auto;
+	text-decoration: none;
+	color:#333;
+
 }
 
 
@@ -1217,6 +1243,7 @@ body
 	width: 100px;
 	height: 100px;
 	box-shadow: 0px 0px 2px grey;
+	object-fit: cover;
 }
 
 .order-product_name
@@ -1300,8 +1327,23 @@ body
 
 #store-products
 {
+	display: none;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+#store-addProduct
+{
 	display: flex;
 	flex-direction: row;
-	overflow: hidden;
-	flex-wrap: nowrap;
+}
+
+#store-orders
+{
+	display: none;
+}
+
+#store-info
+{
+	display: none;
 }

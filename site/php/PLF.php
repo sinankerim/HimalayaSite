@@ -1,4 +1,4 @@
-<!-- PRODUCT LISTINGFUNCTIONS -->
+<!-- PRODUCT LISTING FUNCTIONS -->
 
 <?php
 
@@ -8,7 +8,7 @@
 
 
 				echo "
-				<form action='product.php' method='POST'>
+				<form action='deneme.php' method='POST'>
 
 					<div class='search-product'>
 				
@@ -16,7 +16,9 @@
 						
 						<input type='hidden' name='urunun_idsi' value='".$urunler['uid']."'>
 
-						<div class='search-product-name'>".$urunler['uisim']."</div>
+						<input type='hidden' name='satisin_idsi' value='".$urunler['satisid']."'>
+
+						<div class='search-product-name'><a class='search-product-name' href='product.php?ud=".$urunler["uid"]."'>".$urunler['uisim']."</a></div>
 			
 						<div class='seach-product-price'>".$urunler['fiyat']." TL</div>
 			
