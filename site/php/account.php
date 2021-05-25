@@ -9,6 +9,11 @@
         header("location:login.php");
     }
 
+    if($_SESSION["m-check"]!="")
+	{
+        header("location:store.php");
+	}
+
     if(isset($_GET["logout-check"]))
     {
         unset($_SESSION["uye_adi"]);
@@ -20,8 +25,10 @@
     $k_id=$_SESSION["uye_id"];
     //echo $k_id;    
 
-    $veriler = mysqli_query($baglanti, "select s.siprarisid, s.sid,u.uisim, s.tarih, d.durum, s.adet, sat.fiyat from siparis as s, durum as d, satis as sat, urun as u where (d.id=s.durum and s.sid=sat.satisid and sat.uid=u.uid) and kid=$k_id" );
+    $veriler = mysqli_query($baglanti, "select s.siprarisid, s.sid,u.uisim,u.resim, s.tarih, d.durum, s.adet, sat.fiyat from siparis as s, durum as d, satis as sat, urun as u where (d.id=s.durum and s.sid=sat.satisid and sat.uid=u.uid) and kid=$k_id" );
 
+    
+    
     $urunler=array();
     while($urun = mysqli_fetch_assoc($veriler))
     {
@@ -203,7 +210,7 @@
 
 
                     <div class="order">
-                        <img src="images/urun.jpg">
+                        <img src="<?php echo $urunler["resim"]; ?>">
 
                         <span class="order-product_name"><?php echo $urunler['uisim']; ?></span>
 

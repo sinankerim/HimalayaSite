@@ -40,7 +40,7 @@
     /*$sorgu = mysqli_query($baglanti,"insert into kullanici (eposta, sifre, isim, yas) select $r_email, $r_sifre, $r_isim, 15 from dual where NOT EXISTS(select * from kullanici where eposta=$r_email)");
     header("location:login.php");*/
 
-    $sql="insert into kullanici (eposta, sifre, isim, yas) select '$r_email', '$r_sifre', '$r_isim', 20 from dual where NOT EXISTS(select * from kullanici where eposta='$r_email')";
+    $sql="insert into kullanici (eposta, sifre, isim, yas, adres) select '$r_email', '$r_sifre', '$r_isim', 20, '' from dual where NOT EXISTS(select * from kullanici where eposta='$r_email')";
 
     if($baglanti->query($sql) === TRUE)
     {

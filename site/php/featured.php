@@ -1,6 +1,6 @@
 <div id="featured">
 			<section>
-				<h3>haydiburada.com</h3>
+				<h3>Himalaya.com</h3>
 				<ul>
 					<li><a href="">Hakkımızda</a></li>
 					<li><a href="">Hesabım</a></li>

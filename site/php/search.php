@@ -2,7 +2,7 @@
 include 'connection.php';
 
 $metin = $_GET["s_text"];
-$veriler = mysqli_query($baglanti, "select u.uid, u.uisim, u.resim, sat.fiyat, m.magazaisim from satis as sat, urun as u, magaza as m where (sat.uid=u.uid and sat.mid=m.magazaid) and ((u.uisim like '%$metin%' or u.hakkinda like '%$metin%' or m.magazaisim like '%$metin%'))" );
+$veriler = mysqli_query($baglanti, "select u.uid, u.uisim, u.resim, sat.fiyat, m.magazaisim, sat.satisid from satis as sat, urun as u, magaza as m where (sat.uid=u.uid and sat.mid=m.magazaid) and ((u.uisim like '%$metin%' or u.hakkinda like '%$metin%' or m.magazaisim like '%$metin%'))" );
 $urunler=array();
 while($urun = mysqli_fetch_assoc($veriler))
 {
@@ -44,16 +44,6 @@ while($urun = mysqli_fetch_assoc($veriler))
             <li><a href="#"> Ev Eşyaları </a></li>
             <li>
                 <a href="#"> Bilgisayar, Elektronik </a>
-
-                <!--
-                    <div class="downmenu">
-                            <div class="sol">
-                                <h3>haydiburada.com</h3><br>
-                                Deneme<br>
-                                deneme<br>
-                            </div>
-                    </div>
-                -->
 
             </li>
             <li><a href="#"> Bahçe </a></li>
