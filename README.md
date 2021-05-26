@@ -9,27 +9,28 @@ Kontrol edebilmeniz için halihazırda oluşturulmuş birkaç kullanıcı adı v
 
   Üye
 -----------
-eposta
-sifre
+eposta<br>
+sifre<br>
 -----------
-sinankerim
-12345
+sinankerim<br>
+12345<br>
 -----------
-//////////////////////
+//////////////////////</br>
+</br>
   Mağaza
 -----------
-amag
-amag
+amag<br>
+amag<br>
 -----------
-bmag
-bmag
+bmag<br>
+bmag<br>
 -----------
 
 "Himalaya" websitesi ticari amaç gütmeyen, ders projesi için Sinan Kerim Çalışkan ve Ahmet Eryılmaz tarafından oluşturulmuş bir online alışveriş sitesidir.
 
 Siteyi hazırlarken kullanılan diller/teknolojiler: PHP, HTML/CSS, JavaScript/JQuery ve MySQL'dir.
 
-Sitedeki iş paylaşımı:
+Sitedeki iş paylaşımı:</br>
 Ahmet Eryılmaz/Sitenin tüm MySQL sorguları ve ürüne sepet ekleme fonksiyonu
 Sinan Kerim Çalışkan/ Sitenin tasarımı ve arkaplanda çalışan (sepete ürün ekleme hariç) tüm dinamik fonksiyonlar.
 Sitenin yapımına 16.05.2021'de başlanmış 25.05.2021'de bitirilmiştir.
